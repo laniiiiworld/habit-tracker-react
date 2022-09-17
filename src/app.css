@@ -1,7 +1,39 @@
+*{
+  box-sizing: border-box;
+}
+
 button {
   outline: none;
   border: 0;
   cursor: pointer;
+}
+
+.count{
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin-left: 0.2em;
+  margin-right: 0.5em;
+  color: snow;
+  border-radius: 50%;
+}
+
+.navbar{
+  font-size: 2rem;
+  padding: 1em;
+  background-color: blanchedalmond;
+}
+
+.navbar-logo{
+  color: green;
+  margin-right: 0.5em;
+}
+
+.navbar-count{
+  background-color: green;
 }
 
 .habit {
@@ -11,17 +43,7 @@ button {
 }
 
 .habit-count {
-  display: inline-block;
-  text-align: center;
-  font-size: 2rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  margin-left: 0.2em;
-  margin-right: 0.5em;
   background-color: darkseagreen;
-  color: snow;
-  border-radius: 50%;
 }
 
 .habit-button {
