@@ -1,3 +1,8 @@
+#root{
+  width: 500px;
+  text-align: right;
+}
+
 *{
   box-sizing: border-box;
 }
@@ -6,6 +11,13 @@ button {
   outline: none;
   border: 0;
   cursor: pointer;
+}
+
+.button{
+  font-size: 1.5rem;
+  padding: 0.3em 0.5em;
+  background-color: green;
+  color:white;
 }
 
 .count{
@@ -25,6 +37,7 @@ button {
   font-size: 2rem;
   padding: 1em;
   background-color: blanchedalmond;
+  text-align: center;
 }
 
 .navbar-logo{
@@ -36,10 +49,35 @@ button {
   background-color: green;
 }
 
+.add-form{
+  text-align : center;
+}
+
+.add-input{
+  font-size:2rem;
+  margin-right: 0.2em;
+}
+
+.habits{
+  padding-left: 0;
+  height: 400px;
+  overflow-y: auto;
+}
+
 .habit {
   font-size: 2.5rem;
   padding: 0.5em;
   list-style: none;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.habit-name{
+ width: 50%;
+ text-align: left;
+ overflow-wrap: break-word;
+ white-space: normal;
 }
 
 .habit-count {
@@ -64,4 +102,8 @@ button {
 .habit-delete {
   font-size: 2rem;
   color: darkred;
+}
+
+.reset-button{
+  margin: 0.5em;
 }

@@ -5,11 +5,7 @@ import Habits from './habits';
 
 class App extends Component {
   state = {
-    habits: [
-      { id: 1, name: 'Reading', count: 0 },
-      { id: 2, name: 'Running', count: 0 },
-      { id: 3, name: 'Coding', count: 0 },
-    ],
+    habits: [],
   };
 
   getTotalCount = ()=>{
@@ -18,6 +14,11 @@ class App extends Component {
                       return sum;
                     }, 0);
     return count;
+  };
+
+  handleAdd = (name)=>{
+    const habits = [...this.state.habits, {id: Date.now(), name, count:0}];
+    this.setState({ habits });
   };
 
   handleIncrement = (habit) => {
@@ -40,15 +41,25 @@ class App extends Component {
     this.setState({ habits });
   };
 
+  handelReset = ()=>{
+    const habits = this.state.habits.map(habit=>{
+                      habit.count = 0;
+                      return habit;
+                    });
+    this.setState({habits});
+  };
+
   render() {
     return (
       <>
         <Navbar totalCount={this.getTotalCount()} />
-        <Habits 
+        <Habits
           habits={this.state.habits}
+          onAdd={this.handleAdd}
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
+          onReset={this.handelReset}
          />
       </>);
   }
