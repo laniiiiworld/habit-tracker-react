@@ -4,7 +4,7 @@ class HabitAddForm extends PureComponent {
   formRef = React.createRef();
   inputRef = React.createRef();
 
-  onSubmit = (event)=>{
+  onSubmit = (event) => {
     event.preventDefault();
     const name = this.inputRef.current.value;
     name && this.props.onAdd(name);
@@ -13,9 +13,9 @@ class HabitAddForm extends PureComponent {
 
   render() {
     return (
-      <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
-        <input ref={this.inputRef} type="text" className="add-input" placeholder="Habit"/>
-        <button className="button add-button" >Add</button>
+      <form ref={this.formRef} className='add-form' onSubmit={this.onSubmit}>
+        <input ref={this.inputRef} type='text' className='add-input' placeholder='Habit' />
+        <button className='button add-button'>Add</button>
       </form>
     );
   }

@@ -3,12 +3,11 @@ import HabitAddForm from './habitAddForm';
 import Habit from './habit';
 
 class Habits extends Component {
-
   render() {
     return (
       <>
-        <HabitAddForm onAdd={this.props.onAdd}/>
-        <ul className="habits">
+        <HabitAddForm onAdd={this.props.onAdd} />
+        <ul className='habits'>
           {this.props.habits.map((habit) => (
             <Habit //
               key={habit.id}
@@ -19,7 +18,9 @@ class Habits extends Component {
             />
           ))}
         </ul>
-        <button className="button reset-button" onClick={this.props.onReset}>Reset All</button>
+        <button className='button reset-button' onClick={this.props.onReset}>
+          Reset All
+        </button>
       </>
     );
   }

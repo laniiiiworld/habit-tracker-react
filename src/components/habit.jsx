@@ -7,7 +7,7 @@ class Habit extends PureComponent {
     return (
       <li className='habit'>
         <span className='habit-name align-left'>{name}</span>
-        <span className="align-right">
+        <span className='align-right'>
           <span className='count habit-count'>{count}</span>
           <button className='habit-button habit-increase' onClick={() => this.props.onIncrement(habit)}>
             <i className='fa-solid fa-square-plus'></i>

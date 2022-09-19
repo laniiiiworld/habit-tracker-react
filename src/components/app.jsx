@@ -8,23 +8,23 @@ class App extends Component {
     habits: [],
   };
 
-  getTotalCount = ()=>{
-    const count = this.state.habits.reduce((sum,habit)=>{
-                      if(habit.count > 0) sum += 1; 
-                      return sum;
-                    }, 0);
+  getTotalCount = () => {
+    const count = this.state.habits.reduce((sum, habit) => {
+      if (habit.count > 0) sum += 1;
+      return sum;
+    }, 0);
     return count;
   };
 
-  handleAdd = (name)=>{
-    const habits = [...this.state.habits, {id: Date.now(), name, count:0}];
+  handleAdd = (name) => {
+    const habits = [...this.state.habits, { id: Date.now(), name, count: 0 }];
     this.setState({ habits });
   };
 
   handleIncrement = (habit) => {
-    const habits = this.state.habits.map(item=>{
-      if(item.id === habit.id){
-        return {...item, count: item.count+1};
+    const habits = this.state.habits.map((item) => {
+      if (item.id === habit.id) {
+        return { ...item, count: item.count + 1 };
       }
       return item;
     });
@@ -32,10 +32,10 @@ class App extends Component {
   };
 
   handleDecrement = (habit) => {
-    const habits = this.state.habits.map(item=>{
-      if(item.id === habit.id){
-        const count = item.count-1;
-        return {...item, count: count < 0 ? 0 : count};
+    const habits = this.state.habits.map((item) => {
+      if (item.id === habit.id) {
+        const count = item.count - 1;
+        return { ...item, count: count < 0 ? 0 : count };
       }
       return item;
     });
@@ -47,29 +47,23 @@ class App extends Component {
     this.setState({ habits });
   };
 
-  handelReset = ()=>{
-    const habits = this.state.habits.map(item=>{
-      if(item.count === 0){
+  handelReset = () => {
+    const habits = this.state.habits.map((item) => {
+      if (item.count === 0) {
         return item;
       }
-      return {...item, count: 0};
+      return { ...item, count: 0 };
     });
-    this.setState({habits});
+    this.setState({ habits });
   };
 
   render() {
     return (
       <>
         <Navbar totalCount={this.getTotalCount()} />
-        <Habits
-          habits={this.state.habits}
-          onAdd={this.handleAdd}
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecrement}
-          onDelete={this.handleDelete}
-          onReset={this.handelReset}
-         />
-      </>);
+        <Habits habits={this.state.habits} onAdd={this.handleAdd} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} onDelete={this.handleDelete} onReset={this.handelReset} />
+      </>
+    );
   }
 }
 

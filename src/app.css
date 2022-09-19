@@ -1,9 +1,9 @@
-#root{
+#root {
   width: 500px;
   text-align: right;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -13,14 +13,14 @@ button {
   cursor: pointer;
 }
 
-.button{
+.button {
   font-size: 1.5rem;
   padding: 0.3em 0.5em;
   background-color: green;
-  color:white;
+  color: white;
 }
 
-.count{
+.count {
   display: inline-block;
   text-align: center;
   font-size: 2rem;
@@ -33,32 +33,32 @@ button {
   border-radius: 50%;
 }
 
-.navbar{
+.navbar {
   font-size: 2rem;
   padding: 1em;
   background-color: blanchedalmond;
   text-align: center;
 }
 
-.navbar-logo{
+.navbar-logo {
   color: green;
   margin-right: 0.5em;
 }
 
-.navbar-count{
+.navbar-count {
   background-color: green;
 }
 
-.add-form{
-  text-align : center;
+.add-form {
+  text-align: center;
 }
 
-.add-input{
-  font-size:2rem;
+.add-input {
+  font-size: 2rem;
   margin-right: 0.2em;
 }
 
-.habits{
+.habits {
   padding-left: 0;
   height: 400px;
   overflow-y: auto;
@@ -69,15 +69,15 @@ button {
   padding: 0.5em;
   list-style: none;
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
-.habit-name{
- width: 50%;
- text-align: left;
- overflow-wrap: break-word;
- white-space: normal;
+.habit-name {
+  width: 50%;
+  text-align: left;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .habit-count {
@@ -104,6 +104,6 @@ button {
   color: darkred;
 }
 
-.reset-button{
+.reset-button {
   margin: 0.5em;
 }
