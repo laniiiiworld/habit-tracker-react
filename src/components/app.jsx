@@ -5,55 +5,35 @@ import Habits from './habits';
 
 class App extends Component {
   state = {
-    habits: [],
+    habits: this.props.presenter.getHabits(),
   };
 
   getTotalCount = () => {
-    const count = this.state.habits.reduce((sum, habit) => {
-      if (habit.count > 0) sum += 1;
-      return sum;
-    }, 0);
-    return count;
+    return this.props.presenter.getTotalCount();
   };
 
   handleAdd = (name) => {
-    const habits = [...this.state.habits, { id: Date.now(), name, count: 0 }];
+    const habits = this.props.presenter.add(name);
     this.setState({ habits });
   };
 
   handleIncrement = (habit) => {
-    const habits = this.state.habits.map((item) => {
-      if (item.id === habit.id) {
-        return { ...item, count: item.count + 1 };
-      }
-      return item;
-    });
+    const habits = this.props.presenter.increment(habit.id);
     this.setState({ habits });
   };
 
   handleDecrement = (habit) => {
-    const habits = this.state.habits.map((item) => {
-      if (item.id === habit.id) {
-        const count = item.count - 1;
-        return { ...item, count: count < 0 ? 0 : count };
-      }
-      return item;
-    });
+    const habits = this.props.presenter.decrement(habit.id);
     this.setState({ habits });
   };
 
   handleDelete = (habit) => {
-    const habits = this.state.habits.filter((item) => item.id != habit.id);
+    const habits = this.props.presenter.delete(habit.id);
     this.setState({ habits });
   };
 
   handelReset = () => {
-    const habits = this.state.habits.map((item) => {
-      if (item.count === 0) {
-        return item;
-      }
-      return { ...item, count: 0 };
-    });
+    const habits = this.props.presenter.reset();
     this.setState({ habits });
   };
 
