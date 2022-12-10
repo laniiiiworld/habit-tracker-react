@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../app.css';
-import Navbar from './navbar';
-import Habits from './habits';
+import './app.css';
+import Navbar from '../components/navbar/navbar';
+import Habits from '../components/habits/habits';
 
 class App extends Component {
   state = {

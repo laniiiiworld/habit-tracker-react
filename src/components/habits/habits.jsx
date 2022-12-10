@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import HabitAddForm from './habitAddForm';
-import Habit from './habit';
+import HabitAddForm from '../form/habitAddForm';
+import Habit from '../habit/habit';
 
 class Habits extends Component {
   render() {

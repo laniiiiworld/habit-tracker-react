@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Habit Component renders 1`] = `
+<li
+  className="habit"
+>
+  <span
+    className="habit-name align-left"
+    data-testid="habit-name"
+  >
+    Testing
+  </span>
+  <span
+    className="align-right"
+  >
+    <span
+      className="count habit-count"
+      data-testid="habit-count"
+    >
+      4
+    </span>
+    <button
+      className="habit-button habit-increase"
+      onClick={[Function]}
+      title="increment"
+    >
+      <i
+        className="fa-solid fa-square-plus"
+      />
+    </button>
+    <button
+      className="habit-button habit-decrease"
+      onClick={[Function]}
+      title="decrement"
+    >
+      <i
+        className="fa-solid fa-square-minus"
+      />
+    </button>
+    <button
+      className="habit-button habit-delete"
+      onClick={[Function]}
+      title="delete"
+    >
+      <i
+        className="fa-solid fa-trash-can"
+      />
+    </button>
+  </span>
+</li>
+`;
